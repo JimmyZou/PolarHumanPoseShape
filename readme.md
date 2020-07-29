@@ -20,7 +20,7 @@ coming soon...
 
 
 ## The code for the usage of Polarization Human Pose and Shape Dataset.
-**This dataset can only be used for academic purpose. Commercial use is strictly prohibited without permission.**
+### **This dataset can only be used for academic purpose. Commercial use is strictly prohibited without permission.**
 
 You can download the data from [Google Drive]() or [Microsoft OneDrive](), which consists of
 - **samples.tar.gz** (a small subset of our dataset that you can have a snap of our dataset)
