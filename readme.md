@@ -3,6 +3,8 @@
 Shihao Zou, Xinxin Zuo, Yiming Qian, Sen Wang, Chi Xu, Minglun Gong and Li Cheng. In Proceedings of the 16th European Conference on Computer Vision (ECCV) 2020.
 
 ### [Project page](https://jimmyzou.github.io/publication/2020-polarization-clothed-human-shape)
+<center><img src="demo_detailed_shape.gif" width=“500”/></center>
+
 ### [PHSPDataset page](https://jimmyzou.github.io/publication/2020-PHSPDataset)
 Our PHSPDataset provides:
 - one view polarization image
