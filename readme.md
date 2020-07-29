@@ -1,9 +1,9 @@
-### 3D Human Shape Reconstruction from a Polarization Image
+## 3D Human Shape Reconstruction from a Polarization Image
 
 Shihao Zou, Xinxin Zuo, Yiming Qian, Sen Wang, Chi Xu, Minglun Gong and Li Cheng. In Proceedings of the 16th European Conference on Computer Vision (ECCV) 2020.
 
-#### [Project page](https://jimmyzou.github.io/publication/2020-polarization-clothed-human-shape)
-#### [PHSPDataset page](https://jimmyzou.github.io/publication/2020-PHSPDataset)
+### [Project page](https://jimmyzou.github.io/publication/2020-polarization-clothed-human-shape)
+### [PHSPDataset page](https://jimmyzou.github.io/publication/2020-PHSPDataset)
 Our PHSPDataset provides:
 - one view polarization image
 - three-view Kinects v2 (three-view ToF depth and color images)
@@ -13,11 +13,11 @@ Our PHSPDataset provides:
 
 <center><img src="demo_annotation_shape.gif" width=“500”/></center>
 
-### The code for our 3D human shape reconstruction method
+## The code for our 3D human shape reconstruction method
 coming soon...
 
 
-### The code for the usage of Polarization Human Pose and Shape Dataset.
+## The code for the usage of Polarization Human Pose and Shape Dataset.
 **This dataset can only be used for academic purpose. Commercial use is strictly prohibited without permission.**
 
 You can download the data from [Google Drive]() or [Microsoft OneDrive](), which consists of
@@ -68,7 +68,7 @@ After moving the data in the direction ./data, please revise the direction setti
 python PHSPDataset/multi_view_shape_and_pose.py
 ```
 
-#### Citation
+### Citation
 If you would like to use our code or dataset, please cite either
 ```
 @inproceedings{zou2020detailed,  
