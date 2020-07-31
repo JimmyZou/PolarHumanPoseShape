@@ -22,11 +22,11 @@ coming soon...
 ## The code for the usage of Polarization Human Pose and Shape Dataset.
 ### **This dataset can only be used for academic purpose. Commercial use is strictly prohibited without permission.**
 
-You can download the data from [Google Drive]() or [Microsoft OneDrive](), which consists of
+You can download the data from [Google Drive](https://drive.google.com/drive/folders/1ZGkpiI99J-4ygD9i3ytJdmyk_hkejKCd?usp=sharing) or [Microsoft OneDrive](https://ualbertaca-my.sharepoint.com/:f:/g/personal/szou2_ualberta_ca/EroBwhzfP0NCpl9EdqGeb0kBh6XcZTw1sh2YJ5MJ9PIeMA?e=nIvtdf), which consists of
 - **samples.tar.gz** (a small subset of our dataset that you can have a snap of our dataset)
 - color/color_view*.tar.gz.* (three-view color images, first * means three cameras and second * means the partition of the packed file.)
   - color/color_view*/subject\*\*\_group\*\_time\*/color\_\*.jpg
-- depth.tar.gz (three-view depth images)
+- depth/depth.tar.gz (three-view depth images)
   - depth/view*/subject\*\*\_group\*\_time\*/depth\_\*.png
 - bbx.tar.gz (bounding box, format: frame_idx, bbx for polarization image, bbx for color_view2 images)
   - bbx/subject\*\*\_group\*\_time\*/bbx.txt
@@ -40,7 +40,7 @@ You can download the data from [Google Drive]() or [Microsoft OneDrive](), which
   - HumanAct12/*npy
   - AboutHumanAct12.txt
 
-[//]: # (tar -zcf color_view2.tar.gz ./color/view2/ | split -b 70000m -d -a 1 - color_view2.tar.gz.)
+[//]: # (tar -zcf color_view2.tar.gz ./color/view2/ | split -b 70000m -d -a 1 color_view2.tar.gz color_view2.tar.gz.)
 
 After downloading the dataset, for split files (upload size limitation of OneDrive), you can cat and unpack the files using the command like
 ```
