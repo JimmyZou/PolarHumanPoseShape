@@ -16,7 +16,7 @@ Our PHSPDataset provides:
 <center><img src="demo_annotation_shape.gif" width=“500”/></center>
 
 ## The code for our 3D human shape reconstruction method
-coming soon...
+working on journal extension...coming soon...
 
 
 ## The code for the usage of Polarization Human Pose and Shape Dataset.

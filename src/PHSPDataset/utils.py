@@ -3,6 +3,38 @@ import os
 """camera parameters"""
 
 
+def uvd2xyz(uvd, param):
+    """
+    convert uvd coordinates to xyz
+    return:
+        points in xyz coordinates, shape [N, 3]
+    """
+    # fx, fy, cx, cy, w, h
+    # 0,  1,  2,  3,  4, 5
+    # z = d
+    # x = (u - cx) * d / fx
+    # y = (v - cy) * d / fy
+    fx, fy, cx, cy, k1, k2, k3 = param
+    assert uvd.shape[1] == 3
+    z = uvd[:, 2]
+    x = (uvd[:, 0] - cx) * uvd[:, 2] / fx
+    y = (uvd[:, 1] - cy) * uvd[:, 2] / fy
+    xyz = np.stack([x, y, z], axis=1)
+    return xyz
+
+
+def depth2pts(depth, param):
+    fx, fy, cx, cy, k1, k2, k3 = param
+    u, v = np.meshgrid(np.linspace(0, depth.shape[1] - 1, depth.shape[1]),
+                       np.linspace(0, depth.shape[0] - 1, depth.shape[0]))
+    uv = np.stack([u, v, np.ones_like(u)], axis=2)  # [H, W, 3]
+    uv[:, :, 0] = (uv[:, :, 0] - cx) / fx
+    uv[:, :, 1] = (uv[:, :, 1] - cy) / fy
+    lut = uv.copy()
+    xyz = lut * np.expand_dims(depth, axis=2)
+    return xyz
+
+
 def quat2R(quat):
     """
     Description
@@ -115,13 +147,13 @@ def load_pose_and_shape(data_dir, subject_no='all'):
 
 def projection(points, params):
     # points: [N, 3]
-    fx, fy, cx, cy = params
+    fx, fy, cx, cy, k1, k2, k3 = params
     u = cx + fx * points[:, 0] / points[:, 2]
     v = cy + fy * points[:, 1] / points[:, 2]
     d = points[:, 2]
     return np.stack([u, v, d], axis=-1)
 
-
+'''
 """SMPL pytorch implementation"""
 
 import torch
@@ -341,3 +373,5 @@ def projection(points, params):
     v = cy + fy * points[:, 1] / points[:, 2]
     d = points[:, 2]
     return np.stack([u, v, d], axis=-1)
+'''
+
