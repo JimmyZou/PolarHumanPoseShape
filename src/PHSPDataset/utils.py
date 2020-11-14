@@ -153,7 +153,7 @@ def projection(points, params):
     d = points[:, 2]
     return np.stack([u, v, d], axis=-1)
 
-'''
+
 """SMPL pytorch implementation"""
 
 import torch
@@ -373,5 +373,5 @@ def projection(points, params):
     v = cy + fy * points[:, 1] / points[:, 2]
     d = points[:, 2]
     return np.stack([u, v, d], axis=-1)
-'''
+
 

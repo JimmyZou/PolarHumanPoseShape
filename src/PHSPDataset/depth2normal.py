@@ -294,7 +294,7 @@ if __name__ == '__main__':
     os.environ["OMP_NUM_THREADS"] = "1"
     # obtain_normal_multi_processor(root_dir, num_cpus=6)
 
-    root_dir = '../../../samples'
+    root_dir = '../../data/samples'
     # for the entire dataset, we have filenames such as ['subject01_group1_time1', 'subject01_group1_time2', ...]
     filenames = ['subject04_demo']
     # load extrinsic params
