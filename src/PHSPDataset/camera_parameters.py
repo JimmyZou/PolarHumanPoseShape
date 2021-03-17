@@ -74,5 +74,8 @@ class CameraParams:
 
 if __name__ == '__main__':
     # test
-    camera_params = CameraParams(data_dir='/media/data/data_shihao')
+    camera_params = CameraParams(data_dir='../..//data')
+    T = camera_params.get_extrinsic('c2', 'subject01')
+    print(T.getmat4())
+
 
